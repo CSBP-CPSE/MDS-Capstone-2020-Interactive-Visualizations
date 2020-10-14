@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ontario COVID-19 Map</title>
+
+  <!-- CSS libraries -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Custom CSS styles -->
+  <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <h3>Ontario COVID-19 Map</h3>
+    </div>
+
+
+      <h5>Instructions</h5>
+      <ul>
+        <li>Scroll in the map to zoom in and out.</li>
+        <li>Click and drag the map to move.</li>
+        <li>Hover over a public health unit or long-term care home (represented as points) to view details.</li>
+      </ul>
+
+
+<div id="columns">
+    <div id="map"><!-- Map container --></div>
+    <div id="chart"> <!-- chart container--></div>
+    <div id="legend"><!-- Legend container --></div>
+</div>
+
+<div class="caption">
+  Last updated: <strong> July 12, 2020. </strong>
+</div>
+
+    <table style="width:100%">
+  <tr>
+    <th>Element</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>Incidence Rate</td>
+    <td>\[{\text{No. Cases Reported by PHU} \over \text{PHU population}} \times 100,000\]</td>
+  </tr>
+  <tr>
+    <td>Case-Fatality Ratio</td>
+    <td>\[{\text{No. Fatalities} \over \text{No. Confirmed Cases}} (\%)\]</td>
+  </tr>
+
+  <tr>
+      <td>Amenity Score</td>
+    <td>Amenity richness was calculated from an amenity score provided by Statistics Canada.
+    The amenity score is an aggregate measure indicating whether a dissemination block (or neighbourhood) has access to a grocery store,
+    pharmacy, health care facility, child care facility, primary school, library, public transit stop, and source of employment. A high amenity density neighbourhood is defined as an amenity dense neighbourhood that has proximity measure values in the top third of the distribution for each of the eight proximity measures.
+    The mean of dissemination block scores for a single PHU was calculated.
+  </td>
+  </tr>
+</table>
+
+
+  </br>
+  </br>
+
+    <h3>Long-Term Care Home Outbreaks in Ontario </h3>
+
+      <div id="map4"><!-- Map container --></div>
+
+      <div class = "caption">
+      Outbreak status describes whether a long-term care home is currently experiencing a COVID-19 outbreak (active) or not (inactive), as of <strong> July 12, 2020. </strong>
+    </div>
+
+
+</br>
+
+  </div>
+
+  <div class="footer">
+  </br>
+    <strong>Data sources</strong>: Data from Statistics Canada -
+      <a href="https://www150.statcan.gc.ca/n1/pub/71-607-x/71-607-x2020011-eng.htm" target="_blank">proximity data</a> and
+      <a href="https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310011301" target="_blank">health data</a>.
+      Data from government websites -
+      <a href="https://www.ontario.ca/page/how-ontario-is-responding-covid-19" target="_blank">LTC data</a> and
+      <a href="https://data.ontario.ca/dataset/f4112442-bdc8-45d2-be3c-12efae72fb27/resource/455fd63b-603d-4608-8216-7d8647f43350" target="_blank">Ontario Covid-19 data</a>.
+  </br>
+    <strong> Authors:</strong> Kaitlyn Hobbs, Ngan Lyle, and Sofia Bahtmutsky.
+  </div>
+
+
+  <!-- JS libraries -->
+  <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
+  <script src="https://d3js.org/d3-scale.v3.min.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <!-- Custom JS code -->
+  <script src="main.js"></script>
+  <script src="legend.js"></script>
+  <script src="chart.js"></script>
+
+
+</body>
+</html>
